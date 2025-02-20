@@ -1,0 +1,64 @@
+
+*{/*重设内置css样式*/
+	padding:0;
+	margin:0;
+}
+
+header{
+	background-color: #fff0f5;
+	height: 60px;/*px表示像素*/
+	padding: 50px 85px;/*内边距*/
+	margin-top: 0;
+/*	position: relative;/*固定*/
+}
+h1{
+	color:blue;
+	font-size:36px;
+	position: absolute;/*绝对定位*/
+	left: 85px;
+	top: 10px;
+	line-height: 80px;
+}
+h2{
+	position: absolute;
+	top: 60px;
+	line-height: 80px;
+}
+header ul{
+	position: absolute;/*绝对定位*/
+	right: 40px;
+	top: 60px;
+	line-height: 80px;
+	font-size: 16px;
+}
+header li{
+	display: inline;/*将li标签的改为行内元素(竖式排列变成横式)*/
+	margin-right: 4vw;/*右间距，vw（viewport width）单位表示视窗宽度的百分比*/
+}
+header a{
+	text-decoration: none;/*消除可点击内容固定的下划线*/
+}
+header a:hover {/*hover悬停*/
+	text-decoration: underline;
+}
+
+.area1{
+	background-color: #fff0f5;
+	border: 5px #b255e8 solid;/*边界*/
+	padding: 30px 50px;/*内边距*/
+	margin: 30px 30px;/*外边距*/
+}
+.area2{
+	background-color: #fff0f5;
+	border: 5px #b255e8 solid;/*边界*/
+	padding: 30px 50px;/*内边距*/
+	margin: 30px 30px;/*外边距*/
+	
+}
+
+footer{
+	background-color: #fff0f5;
+	border: 5px #b255e8 solid;/*边界*/
+	padding: 30px 50px;/*内边距*/
+	margin: 30px 30px;/*外边距*/
+}
