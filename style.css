@@ -5,60 +5,177 @@
 }
 
 header{
-	background-color: #fff0f5;
-	height: 60px;/*px表示像素*/
+	background-color: white;
+	height: 0px;/*区块高度，px表示像素*/
 	padding: 50px 85px;/*内边距*/
 	margin-top: 0;
 /*	position: relative;/*固定*/
 }
-h1{
-	color:blue;
-	font-size:36px;
+header h1{
+	color:black;
+	font-size:32px;
 	position: absolute;/*绝对定位*/
 	left: 85px;
-	top: 10px;
+	top: 0;
 	line-height: 80px;
 }
-h2{
+header h2{
+	font-size: 20px;
 	position: absolute;
-	top: 60px;
+	top: 7px;
+	left: 180px;
 	line-height: 80px;
 }
-header ul{
+/*header ul{
 	position: absolute;/*绝对定位*/
-	right: 40px;
+/*	right: 40px;
 	top: 60px;
 	line-height: 80px;
 	font-size: 16px;
 }
 header li{
 	display: inline;/*将li标签的改为行内元素(竖式排列变成横式)*/
-	margin-right: 4vw;/*右间距，vw（viewport width）单位表示视窗宽度的百分比*/
-}
+/*	margin-right: 4vw;/*右间距，vw（viewport width）单位表示视窗宽度的百分比*/
+/*}
 header a{
 	text-decoration: none;/*消除可点击内容固定的下划线*/
-}
+/*}
 header a:hover {/*hover悬停*/
-	text-decoration: underline;
+/*	text-decoration: underline;
 }
-
+*/
 .area1{
-	background-color: #fff0f5;
-	border: 5px #b255e8 solid;/*边界*/
-	padding: 30px 50px;/*内边距*/
-	margin: 30px 30px;/*外边距*/
+	height: 95vh;/*vh：视窗高度的百分比*/
+	color: rgb(255, 255, 255);/*字体颜色*/
+	
+	background-image: url("/test/images/严肃的灵梦.png");
+	background-repeat: no-repeat;
+	background-size: cover;/*图片符合最长边，但可能超出边界；contain：图片符合最短边，但可能填不满*/
+	background-position: center;/*常与前一句一起用*/
+
+	display: flex;/*使用display位置*/
+	flex-direction: column;/*元素打竖排列*/
+	align-items: center;/*水平对齐于中间*/
+	justify-content: center;/*垂直对齐*/
+
+}
+.area1 h1{
+	font-size: 60px;
+	-webkit-text-stroke: 0.5px #485652;/*加字体边*/
+}
+.area1 p{
+	font-size: 30px;
+	margin: 25px 0;
+}
+.area1 a{
+	font-size: 20px;
+	color: white;
+	text-decoration: none;/*消除可点击内容固定的下划线*/
+	border: 1px solid #acacac;/*加边框*/
+	padding: 10px 20px;/*垫上内边距*/
+	border-radius: 6px;/*边框半径（加圆角）*/
+}
+.border1{
+	background-color: #485652;
+	color: white;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	line-height: 1.8em;/*行高1.8倍（类似行间距?）*/
 }
 .area2{
-	background-color: #fff0f5;
-	border: 5px #b255e8 solid;/*边界*/
-	padding: 30px 50px;/*内边距*/
-	margin: 30px 30px;/*外边距*/
+	display: flex;
 	
 }
-
-footer{
+.area2 img{
+	width: 50%;/*平分*/
+}
+.info{
+	width: 50%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.info h1{
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.info p{
+	font-size: 20px;
+	text-align: center;/*<p>段落的对齐（通过<br>换行过）*//*文字对齐于中央*/
+	line-height: 2em;
+}
+.area3{
+	display: flex;
 	background-color: #fff0f5;
-	border: 5px #b255e8 solid;/*边界*/
-	padding: 30px 50px;/*内边距*/
-	margin: 30px 30px;/*外边距*/
+	align-items: center;
+	justify-content: space-between;
+	padding: 100px 180px 80px;
+}
+.area3 div{
+	width: 300px;
+	text-align: center;
+}
+.area3 img{
+	width: 100%;/*图片与div同宽*/
+	border-radius: 10px;
+}
+.area3 h1{
+	font-size: 25px;
+	margin: 20px 0;
+}
+.area3 p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+}
+.newsletter{
+	height: 20vh;
+	background-image: url("/test/images/冬瓜和西瓜.png");
+	background-repeat: no-repeat;
+	background-size: cover;/*图片符合最长边，但可能超出边界；contain：图片符合最短边，但可能填不满*/
+	background-position: center;/*常与前一句一起用*/
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.newsletter input, .newsletter button{
+	margin-top: 10vh;
+	background-color: transparent;/*透明背景*/
+	color: white;
+	border: 1px soild white;
+	padding: 8px;
+	border-radius: 5px;
+	font-size: 15px;
+}
+.newsletter input{
+	width: 200px;
+	margin-right: 15px;
+}
+.newsletter button{
+	width: 70px;
+	cursor: pointer;/*使鼠标变手指*/
+}
+input::placeholder{/*输入框内的文字*/
+	color: white;
+}
+/*input:focus{*/
+/*	outline: none;去除选中默认黑框*/
+/*	border-color: white;换颜色*/
+/*}*/
+footer{
+	background-color: black;
+	color: white;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
 }
